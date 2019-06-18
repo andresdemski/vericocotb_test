@@ -1,0 +1,5 @@
+                     | verilator                      | icarus                        
+              ERRORS | 0                              | 0                             
+            SIM TIME | 1.31 NS                        | 1.26 NS                       
+           REAL TIME | 0.05 S                         | 0.04 S                        
+     SIM / REAL TIME | 27.24 NS/S                     | 35.84 NS/S                    
