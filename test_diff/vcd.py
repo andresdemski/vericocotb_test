@@ -1,14 +1,14 @@
 from Verilog_VCD.Verilog_VCD import parse_vcd
 import re
 
-def vcd_to_dic(vcd_file, filter_bypass=False):
+def vcd_to_dic(vcd_file, filter=None):
     vcd = parse_vcd(vcd_file)
     signals = {}
     for k in vcd.keys():
         net = vcd[k]['nets'][0]
         signal = net['hier'] + '.' + net['name']
-        if filter_bypass:
-            signal = re.sub('^BYPASSTOP_.*?\.', '', signal)
+        if filter:
+            signal = re.sub('^' + filter + '.*?\.', '', signal)
         signals[signal] = {}
         signals[signal]['size'] = net['size']
         signals[signal]['tv'] = to_fixed_size(vcd[k]['tv'], int(net['size'], 10))

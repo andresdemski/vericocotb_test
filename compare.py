@@ -3,7 +3,7 @@ import sys
 
 def main():
     veri_vcd = vcd_to_dic('./results/{}/verilator/dump.vcd'.format(sys.argv[1]),
-                          filter_bypass=True)
+                          filter='COCOTB')
     icarus_vcd = vcd_to_dic('./results/{}/icarus/dump.vcd'.format(sys.argv[1]))
     summary, diff = compare_vcd(veri_vcd, icarus_vcd)
 

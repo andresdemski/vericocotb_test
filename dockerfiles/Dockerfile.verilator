@@ -10,7 +10,7 @@ python3-pip \
 virtualenv \
 iverilog
 
-RUN git clone https://github.com/antmicro/cocotb-verilator-build build
+RUN git clone https://github.com/chipsalliance/tools-cocotb-verilator-build build
 
 WORKDIR build
 
