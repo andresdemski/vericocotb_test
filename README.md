@@ -1,6 +1,6 @@
 # VERICOCOTB Tests
 
-## How to run?
+## Get started
 
 ```bash
 python3 -m venv venv
